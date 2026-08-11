@@ -1,0 +1,958 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   COLORS
+===================================================== */
+
+:root {
+
+    --purple-dark: #4c1d95;
+    --purple: #7c3aed;
+    --purple-light: #8b5cf6;
+    --purple-lighter: #a78bfa;
+
+    --purple-soft: #ede9fe;
+    --purple-pale: #f5f3ff;
+
+    --white: #ffffff;
+
+    --text-dark: #241b35;
+    --text-gray: #6b6575;
+
+    --border: #e4dff0;
+
+    --green: #16a34a;
+    --green-light: #dcfce7;
+
+    --orange: #ea580c;
+    --orange-light: #ffedd5;
+
+    --red: #dc2626;
+    --red-light: #fee2e2;
+
+    --shadow:
+        0 15px 40px rgba(76, 29, 149, 0.15);
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f3ff,
+            #ede9fe,
+            #faf5ff
+        );
+
+    color: var(--text-dark);
+
+    padding: 20px;
+}
+
+
+/* =====================================================
+   COMMON SCREEN
+===================================================== */
+
+.screen {
+
+    width: 620px;
+
+    background: var(--white);
+
+    border-radius: 24px;
+
+    padding: 45px;
+
+    box-shadow: var(--shadow);
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   START SCREEN
+===================================================== */
+
+.startScreen {
+
+    display: block;
+}
+
+
+.logo {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple-dark),
+            var(--purple-light)
+        );
+
+    color: white;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 25px
+        rgba(124, 58, 237, 0.3);
+}
+
+
+.startScreen h1 {
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+}
+
+
+.startScreen h1 span {
+
+    color: var(--purple);
+}
+
+
+.tagline {
+
+    color: var(--text-gray);
+
+    font-size: 16px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =====================================================
+   PRIMARY BUTTON
+===================================================== */
+
+.primaryBtn {
+
+    border: none;
+
+    padding: 15px 45px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple-dark),
+            var(--purple)
+        );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    box-shadow:
+        0 8px 20px
+        rgba(124, 58, 237, 0.25);
+}
+
+
+.primaryBtn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(124, 58, 237, 0.35);
+}
+
+
+/* =====================================================
+   HEADINGS
+===================================================== */
+
+.topHeading {
+
+    margin-bottom: 30px;
+}
+
+
+.smallTitle {
+
+    color: var(--purple);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.topHeading h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+
+.topHeading p:not(.smallTitle) {
+
+    color: var(--text-gray);
+}
+
+
+/* =====================================================
+   TOPIC SCREEN
+===================================================== */
+
+.topicScreen {
+
+    display: none;
+}
+
+
+.topicGrid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+.topicBtn {
+
+    min-height: 100px;
+
+    border: 2px solid var(--border);
+
+    background: white;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    color: var(--text-dark);
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+
+.topicBtn:hover {
+
+    border-color: var(--purple-light);
+
+    background: var(--purple-pale);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(124, 58, 237, 0.12);
+}
+
+
+.topicIcon {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 11px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: var(--purple-soft);
+
+    color: var(--purple-dark);
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   DIFFICULTY SCREEN
+===================================================== */
+
+.difficultyScreen {
+
+    display: none;
+}
+
+
+.difficultyOptions {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.difficultyBtn {
+
+    min-height: 160px;
+
+    border-radius: 16px;
+
+    background: white;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    transition: 0.25s;
+}
+
+
+.difficultyBtn strong {
+
+    font-size: 18px;
+}
+
+
+.difficultyBtn small {
+
+    color: var(--text-gray);
+}
+
+
+/* Easy */
+
+.difficultyBtn.easy {
+
+    border: 2px solid #bbf7d0;
+
+}
+
+
+.difficultyBtn.easy .difficultyIcon {
+
+    background: var(--green-light);
+
+}
+
+
+.difficultyBtn.easy:hover {
+
+    background: #f0fdf4;
+
+    border-color: var(--green);
+}
+
+
+/* Medium */
+
+.difficultyBtn.medium {
+
+    border: 2px solid #fed7aa;
+
+}
+
+
+.difficultyBtn.medium .difficultyIcon {
+
+    background: var(--orange-light);
+
+}
+
+
+.difficultyBtn.medium:hover {
+
+    background: #fff7ed;
+
+    border-color: var(--orange);
+}
+
+
+/* Hard */
+
+.difficultyBtn.hard {
+
+    border: 2px solid #fecaca;
+
+}
+
+
+.difficultyBtn.hard .difficultyIcon {
+
+    background: var(--red-light);
+
+}
+
+
+.difficultyBtn.hard:hover {
+
+    background: #fef2f2;
+
+    border-color: var(--red);
+}
+
+
+.difficultyIcon {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+
+/* =====================================================
+   NUMBER SCREEN
+===================================================== */
+
+.numberScreen {
+
+    display: none;
+}
+
+
+.numberOptions {
+
+    display: flex;
+
+    gap: 20px;
+
+    justify-content: center;
+
+    margin-bottom: 30px;
+}
+
+
+.numberBtn {
+
+    width: 150px;
+
+    height: 130px;
+
+    border: 2px solid var(--border);
+
+    border-radius: 16px;
+
+    background: white;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.25s;
+}
+
+
+.numberBtn strong {
+
+    font-size: 38px;
+
+    color: var(--purple);
+}
+
+
+.numberBtn span {
+
+    color: var(--text-gray);
+
+    margin-top: 5px;
+}
+
+
+.numberBtn:hover {
+
+    border-color: var(--purple);
+
+    background: var(--purple-pale);
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.backBtn {
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--purple);
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   QUIZ
+===================================================== */
+
+.quizContainer {
+
+    display: none;
+
+    width: 700px;
+
+    background: white;
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =====================================================
+   QUIZ HEADER
+===================================================== */
+
+.quizHeader {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.quizLabel {
+
+    color: var(--purple);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+}
+
+
+.quizHeader h2 {
+
+    font-size: 22px;
+
+    margin-top: 5px;
+}
+
+
+#quizDifficulty {
+
+    display: inline-block;
+
+    margin-top: 7px;
+
+    padding: 4px 10px;
+
+    border-radius: 20px;
+
+    background: var(--purple-soft);
+
+    color: var(--purple-dark);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   TIMER
+===================================================== */
+
+.timerContainer {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.timerContainer > span {
+
+    color: var(--text-gray);
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+.timer {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple-dark),
+            var(--purple-light)
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.progressInfo {
+
+    color: var(--text-gray);
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+
+.progressBar {
+
+    height: 7px;
+
+    background: var(--purple-soft);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-bottom: 30px;
+}
+
+
+.progressFill {
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--purple-dark),
+            var(--purple-light)
+        );
+
+    transition: width 0.3s;
+}
+
+
+/* =====================================================
+   QUESTION
+===================================================== */
+
+.questionCard {
+
+    background: var(--purple-pale);
+
+    border-left: 5px solid var(--purple);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+}
+
+
+.question {
+
+    font-size: 20px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   CHOICES
+===================================================== */
+
+.choices {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.choice {
+
+    padding: 15px 18px;
+
+    border: 2px solid var(--border);
+
+    border-radius: 11px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    background: white;
+}
+
+
+.choice:hover {
+
+    border-color: var(--purple-light);
+
+    background: var(--purple-pale);
+}
+
+
+.choice.selected {
+
+    border-color: var(--purple);
+
+    background: var(--purple-soft);
+
+    color: var(--purple-dark);
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   NEXT BUTTON
+===================================================== */
+
+.nextBtn {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple-dark),
+            var(--purple)
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.nextBtn:hover {
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   ALERT
+===================================================== */
+
+.alert {
+
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background: var(--purple-soft);
+
+    color: var(--purple-dark);
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   SCORE
+===================================================== */
+
+.scoreCard {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    font-size: 22px;
+
+    color: var(--purple-dark);
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .screen,
+    .quizContainer {
+
+        width: 95%;
+
+        padding: 25px;
+    }
+
+
+    .topicGrid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .difficultyOptions {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .numberOptions {
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .numberBtn {
+
+        width: 200px;
+    }
+}

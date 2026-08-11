@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuizVerse - Topic Based Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= START SCREEN ================= -->
+
+    <div class="screen startScreen">
+
+        <div class="logo">
+            Q
+        </div>
+
+        <h1>Quiz<span>Verse</span></h1>
+
+        <p class="tagline">
+            Challenge yourself. Learn something new.
+        </p>
+
+        <button class="primaryBtn startBtn">
+            Start Quiz
+        </button>
+
+    </div>
+
+
+    <!-- ================= TOPIC SCREEN ================= -->
+
+    <div class="screen topicScreen">
+
+        <div class="topHeading">
+
+            <p class="smallTitle">STEP 1</p>
+
+            <h2>Choose Your Topic</h2>
+
+            <p>
+                Select a subject you want to practice.
+            </p>
+
+        </div>
+
+
+        <div class="topicGrid">
+
+            <button class="topicBtn" data-topic="html">
+                <span class="topicIcon">&lt;/&gt;</span>
+                <span>HTML</span>
+            </button>
+
+            <button class="topicBtn" data-topic="css">
+                <span class="topicIcon">#</span>
+                <span>CSS</span>
+            </button>
+
+            <button class="topicBtn" data-topic="javascript">
+                <span class="topicIcon">JS</span>
+                <span>JavaScript</span>
+            </button>
+
+            <button class="topicBtn" data-topic="dsa">
+                <span class="topicIcon">DS</span>
+                <span>DSA</span>
+            </button>
+
+            <button class="topicBtn" data-topic="oops">
+                <span class="topicIcon">O</span>
+                <span>OOPs</span>
+            </button>
+
+            <button class="topicBtn" data-topic="computer-networks">
+                <span class="topicIcon">CN</span>
+                <span>Computer Networks</span>
+            </button>
+
+            <button class="topicBtn" data-topic="operating-systems">
+                <span class="topicIcon">OS</span>
+                <span>Operating Systems</span>
+            </button>
+
+            <button class="topicBtn" data-topic="aptitude">
+                <span class="topicIcon">%</span>
+                <span>Aptitude</span>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= DIFFICULTY SCREEN ================= -->
+
+    <div class="screen difficultyScreen">
+
+        <div class="topHeading">
+
+            <p class="smallTitle">STEP 2</p>
+
+            <h2>Select Difficulty</h2>
+
+            <p id="selectedTopicText">
+                Choose the difficulty level.
+            </p>
+
+        </div>
+
+
+        <div class="difficultyOptions">
+
+            <button class="difficultyBtn easy" data-difficulty="easy">
+
+                <span class="difficultyIcon">🌱</span>
+
+                <strong>Easy</strong>
+
+                <small>
+                    Basic concepts
+                </small>
+
+            </button>
+
+
+            <button class="difficultyBtn medium" data-difficulty="medium">
+
+                <span class="difficultyIcon">⚡</span>
+
+                <strong>Medium</strong>
+
+                <small>
+                    Intermediate
+                </small>
+
+            </button>
+
+
+            <button class="difficultyBtn hard" data-difficulty="hard">
+
+                <span class="difficultyIcon">🔥</span>
+
+                <strong>Hard</strong>
+
+                <small>
+                    Advanced
+                </small>
+
+            </button>
+
+        </div>
+
+
+        <button class="backBtn" id="backToTopics">
+            ← Back to Topics
+        </button>
+
+    </div>
+
+
+    <!-- ================= NUMBER SCREEN ================= -->
+
+    <div class="screen numberScreen">
+
+        <div class="topHeading">
+
+            <p class="smallTitle">STEP 3</p>
+
+            <h2>How Many Questions?</h2>
+
+            <p id="selectedDifficultyText">
+                Choose the number of questions.
+            </p>
+
+        </div>
+
+
+        <div class="numberOptions">
+
+            <button class="numberBtn" data-number="5">
+
+                <strong>5</strong>
+
+                <span>
+                    Questions
+                </span>
+
+            </button>
+
+
+            <button class="numberBtn" data-number="10">
+
+                <strong>10</strong>
+
+                <span>
+                    Questions
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <button class="backBtn" id="backToDifficulty">
+            ← Back to Difficulty
+        </button>
+
+    </div>
+
+
+    <!-- ================= QUIZ SCREEN ================= -->
+
+    <div class="quizContainer">
+
+        <div class="quizHeader">
+
+            <div>
+
+                <p class="quizLabel">
+                    QUIZ
+                </p>
+
+                <h2 id="quizTopic">
+                    Topic
+                </h2>
+
+                <span id="quizDifficulty">
+                    Difficulty
+                </span>
+
+            </div>
+
+
+            <div class="timerContainer">
+
+                <span>
+                    TIME
+                </span>
+
+                <div class="timer">
+                    15
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Progress -->
+
+        <div class="progressInfo">
+
+            <span id="questionNumber">
+                Question 1 of 5
+            </span>
+
+        </div>
+
+
+        <div class="progressBar">
+
+            <div class="progressFill"></div>
+
+        </div>
+
+
+        <!-- Question -->
+
+        <div class="questionCard">
+
+            <h3 class="question">
+                Question will appear here
+            </h3>
+
+        </div>
+
+
+        <!-- Choices -->
+
+        <div class="choices">
+        </div>
+
+
+        <!-- Alert -->
+
+        <div class="alert">
+        </div>
+
+
+        <!-- Score -->
+
+        <div class="scoreCard">
+        </div>
+
+
+        <!-- Next -->
+
+        <button class="nextBtn">
+            Next Question →
+        </button>
+
+    </div>
+
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
